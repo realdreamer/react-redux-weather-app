@@ -1,17 +1,13 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { citySearchAction } from '../actions';
 
 import Header from '../components/Header/Header';
 import CityList from '../components/CityList/CityList';
 
 class Home extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      city: []
-    }
-  }
   render() {
-    const { city } = this.state;
+    const { city } = this.props;
     const action = {
       onSearch: this.props.onSearch
     };
@@ -25,4 +21,16 @@ class Home extends Component {
   }
 }
 
-export default Home;
+const mapStateToProps = (state) => {
+  return {
+    city: state.CityList.searchCityResults
+  };
+};
+
+const mapDispatchToProps = dispatch => ({
+  onSearch: searchText => {
+    dispatch(citySearchAction(searchText));
+  }
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);
