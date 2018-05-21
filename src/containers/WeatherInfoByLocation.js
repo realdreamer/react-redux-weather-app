@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchCityWeatherData } from "../actions";
-import WeatherInfo from "../components/WeatherInfo/WeatherInfo";
+import WeatherForecast from "../components/WeatherForecast/WeatherForecast";
 
 class WeatherInfoByLocation extends Component {
   constructor(props) {
@@ -27,7 +27,7 @@ class WeatherInfoByLocation extends Component {
       <div className="location">
         <h3>{this.props.locationWeatherData.title}</h3>
         <h6>{this.props.locationWeatherData.location_type}</h6>
-        <WeatherInfo
+        <WeatherForecast
           weather={this.props.locationWeatherData.consolidated_weather}
         />
       </div>
