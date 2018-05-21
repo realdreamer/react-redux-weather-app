@@ -11,7 +11,6 @@ export const citySearchAction = (searchText) => {
       return res.json()
     })
     .then( (searchResults) => {
-      console.log(searchResults);
       dispatch({
         type: types.FETCHED_CITY,
         payload: {
@@ -33,7 +32,6 @@ export const fetchCityWeatherData = locationId => {
         return res.json();
       })
       .then(weatherData => {
-        console.log(JSON.stringify(weatherData));
         dispatch({
           type: types.FETCHED_CITY_WEATHER_DATA,
           payload: {

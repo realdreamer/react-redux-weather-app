@@ -7,8 +7,6 @@ const initialState = {
 const citySearch = (state = initialState, action) => {
   switch (action.type) {
     case FETCHED_CITY:
-      console.log(action);
-      console.log("Reached Reducers..!");
       return { ...state, searchCityResults: action.payload.searchCityResults };
     default:
       return state;
