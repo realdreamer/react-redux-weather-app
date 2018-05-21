@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders correctly 1`] = `
+<header>
+  <h1>
+    Weather App
+  </h1>
+  <div
+    className="header-search"
+  >
+    <form
+      className="city-form"
+      id="city-form"
+      name="city-form"
+      onSubmit={[Function]}
+    >
+      <input
+        id="city-search"
+        name="city-search__input"
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+      <input
+        id="city-search-btn"
+        name="city-search__btn"
+        type="submit"
+        value="Search"
+      />
+    </form>
+  </div>
+</header>
+`;
+
+exports[`Header should attach props pass in 1`] = `
+<header>
+  <h1>
+    Weather App
+  </h1>
+  <div
+    className="header-search"
+  >
+    <form
+      className="city-form"
+      id="city-form"
+      name="city-form"
+      onSubmit={[Function]}
+    >
+      <input
+        id="city-search"
+        name="city-search__input"
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+      <input
+        id="city-search-btn"
+        name="city-search__btn"
+        type="submit"
+        value="Search"
+      />
+    </form>
+  </div>
+</header>
+`;

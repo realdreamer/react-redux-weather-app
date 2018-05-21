@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CityList /> Component  component renders without error 1`] = `
+<div
+  className="no-results"
+>
+  No city found
+</div>
+`;
+
+exports[`<CityList /> Component  pass props with data 1`] = `
+<div
+  className="list"
+>
+  <div
+    className="city"
+  >
+    <a
+      href="/location/2295424"
+      onClick={[Function]}
+    >
+      Chennai
+    </a>
+  </div>
+</div>
+`;

@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Weather Info render weather info component by passing props in 1`] = `
+<section
+  className="weatherInfoBlock"
+>
+  <div
+    className="info"
+  >
+    <h3>
+      Light Cloud
+    </h3>
+    <div
+      className="temp-details"
+    >
+      <h4>
+        Min Temp : 
+        29.2175
+      </h4>
+      <h4>
+        Max Temp : 
+        35.44
+      </h4>
+    </div>
+    <div
+      className="wind-details"
+    >
+      <h4>
+        7.957708449322623
+      </h4>
+      <span>
+        164
+      </span>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`Weather Info render weather info component without fail 1`] = `null`;
