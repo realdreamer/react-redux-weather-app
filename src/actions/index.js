@@ -21,3 +21,25 @@ export const citySearchAction = (searchText) => {
     });
   };
 };
+
+export const fetchCityWeatherData = locationId => {
+  return dispatch => {
+    return fetch("https://www.metaweather.com/api/location/" + locationId, {
+      method: "get",
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*"
+    })
+      .then(res => {
+        return res.json();
+      })
+      .then(weatherData => {
+        console.log(JSON.stringify(weatherData));
+        dispatch({
+          type: types.FETCHED_CITY_WEATHER_DATA,
+          payload: {
+            locationWeatherData: weatherData
+          }
+        });
+      });
+  };
+};

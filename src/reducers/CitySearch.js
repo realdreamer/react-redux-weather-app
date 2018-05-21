@@ -1,4 +1,4 @@
-import * as types from '../constants/ActionTypes';
+import { FETCHED_CITY } from '../constants/ActionTypes';
 
 const initialState = {
   searchCityResults: [],
@@ -6,7 +6,7 @@ const initialState = {
 
 const citySearch = (state = initialState, action) => {
   switch (action.type) {
-    case types.FETCHED_CITY:
+    case FETCHED_CITY:
       console.log(action);
       console.log("Reached Reducers..!");
       return { ...state, searchCityResults: action.payload.searchCityResults };
