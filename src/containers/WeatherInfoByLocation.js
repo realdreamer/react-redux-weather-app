@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { fetchCityWeatherData } from '../actions';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { fetchCityWeatherData } from "../actions";
+import WeatherInfo from "../components/WeatherInfo/WeatherInfo";
 
 class WeatherInfoByLocation extends Component {
   constructor(props) {
@@ -26,6 +27,9 @@ class WeatherInfoByLocation extends Component {
       <div className="location">
         <h3>{this.props.locationWeatherData.title}</h3>
         <h6>{this.props.locationWeatherData.location_type}</h6>
+        <WeatherInfo
+          weather={this.props.locationWeatherData.consolidated_weather}
+        />
       </div>
     );
   }
@@ -38,7 +42,9 @@ const mapDispatchToProps = dispatch => ({
 });
 
 const mapStateToProps = state => ({
-  locationWeatherData: state.LocationWeatherData.locationWeatherData,
+  locationWeatherData: state.LocationWeatherData.locationWeatherData
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(WeatherInfoByLocation);
+export default connect(mapStateToProps, mapDispatchToProps)(
+  WeatherInfoByLocation
+);

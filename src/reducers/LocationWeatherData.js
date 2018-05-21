@@ -1,4 +1,4 @@
-import { FETCHED_CITY_WEATHER_DATA } from "../constants/ActionTypes";
+import { FETCHED_CITY_WEATHER_DATA } from '../constants/ActionTypes';
 
 const initialState = {
   locationWeatherData: {}
