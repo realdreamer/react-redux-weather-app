@@ -1,43 +1,28 @@
 import * as types from '../constants/ActionTypes';
+import ApiService from '../utils/ApiService';
 
-export const citySearchAction = (searchText) => {
-  return dispatch => {
-    return fetch('https://www.metaweather.com/api/location/search/?query='+searchText, {
-      'method': 'get',
-      'Content-Type': 'application/json',
-      'Access-Control-Allow-Origin': '*'
-    })
-    .then( (res) => {
-      return res.json()
-    })
-    .then( (searchResults) => {
-      dispatch({
-        type: types.FETCHED_CITY,
-        payload: {
-          searchCityResults: searchResults
-        }
-      })
+export const citySearchAction = searchText => {
+  return async dispatch => {
+    const url = `https://www.metaweather.com/api/location/search/?query=${searchText}`;
+    const searchCityResults = await ApiService(url);
+    dispatch({
+      type: types.FETCHED_CITY,
+      payload: {
+        searchCityResults
+      }
     });
   };
 };
 
 export const fetchCityWeatherData = locationId => {
-  return dispatch => {
-    return fetch("https://www.metaweather.com/api/location/" + locationId, {
-      method: "get",
-      "Content-Type": "application/json",
-      "Access-Control-Allow-Origin": "*"
-    })
-      .then(res => {
-        return res.json();
-      })
-      .then(weatherData => {
-        dispatch({
-          type: types.FETCHED_CITY_WEATHER_DATA,
-          payload: {
-            locationWeatherData: weatherData
-          }
-        });
-      });
+  return async dispatch => {
+    const url = `https://www.metaweather.com/api/location/${locationId}`;
+    const locationWeatherData = await ApiService(url);
+    dispatch({
+      type: types.FETCHED_CITY_WEATHER_DATA,
+      payload: {
+        locationWeatherData
+      }
+    });
   };
 };
