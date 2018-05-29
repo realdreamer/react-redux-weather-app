@@ -3,8 +3,6 @@ import renderer from 'react-test-renderer';
 import { shallow } from 'enzyme';
 import SearchForm from '../SearchForm';
 
-jest.mock('../../../actions');
-
 describe('<SearchForm />', () => {
   let callback;
   let Component;
@@ -26,11 +24,10 @@ describe('<SearchForm />', () => {
   });
 
   it('Should call callback when form submit happens', () => {
-    // Component.setState({searchText: 'chennai'});
+    const e = { preventDefault: () => true };
     Component.find('#city-search').simulate('change', { target: { value: 'chennai' } });
-    Component.find('#city-search-btn').simulate('submit');
+    Component.find('#city-form').simulate('submit', e);
     expect(Component.state().searchText).toBe('chennai');
     expect(callback).toHaveBeenCalled();
   });
-
 });
