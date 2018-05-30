@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { fetchCityWeatherData } from "../actions";
 import WeatherForecast from "../components/WeatherForecast/WeatherForecast";
 
-class WeatherInfoByLocation extends Component {
+export class WeatherInfoByLocation extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -13,16 +13,8 @@ class WeatherInfoByLocation extends Component {
   componentDidMount() {
     this.props.fetchData(this.props.match.params.cityId);
   }
-  componentDidCatch(error, info) {
-    // Display fallback UI
-    this.setState({ hasError: true });
-  }
 
   render() {
-    if (this.state.hasError) {
-      // You can render any custom fallback UI
-      return <h1>Something went wrong.</h1>;
-    }
     return (
       <div className="location">
         <h3>{this.props.locationWeatherData.title}</h3>
