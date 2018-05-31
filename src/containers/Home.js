@@ -5,7 +5,7 @@ import { citySearchAction } from '../actions';
 import Header from '../components/Header/Header';
 import CityList from '../components/CityList/CityList';
 
-class Home extends Component {
+export class Home extends Component {
   render() {
     const { city } = this.props;
     const action = {
