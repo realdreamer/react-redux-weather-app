@@ -1,0 +1,4 @@
+.weather-info {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100% - 41px); }

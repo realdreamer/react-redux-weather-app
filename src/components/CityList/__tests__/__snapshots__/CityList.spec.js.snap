@@ -10,12 +10,13 @@ exports[`<CityList /> Component  component renders without error 1`] = `
 
 exports[`<CityList /> Component  pass props with data 1`] = `
 <div
-  className="list"
+  className="city-list"
 >
   <div
-    className="city"
+    className="city-name"
   >
     <a
+      className="city-link"
       href="/location/2295424"
       onClick={[Function]}
     >

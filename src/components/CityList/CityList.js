@@ -1,13 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import './styles/CityList.css';
+
 const CityList = ( {city} ) => {
   if (city.length > 0 ) {
-    return (<div className="list">
+    return (<div className="city-list">
             { city.map((city) => {
                 return (
-                  <div className="city" key={city.woeid}>
-                    <Link to={"/location/"+city.woeid}>{city.title}</Link>
+                  <div className="city-name" key={city.woeid}>
+                    <Link to={"/location/"+city.woeid} className="city-link">{city.title}</Link>
                   </div>
                 )
               })

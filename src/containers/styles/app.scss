@@ -1,0 +1,49 @@
+$font-family-sans-serif:
+  // Safari for OS X and iOS (San Francisco)
+  -apple-system,
+  // Chrome < 56 for OS X (San Francisco)
+  BlinkMacSystemFont,
+  // Windows
+  "Segoe UI",
+  // Android
+  "Roboto",
+  // Basic web fallback
+  "Helvetica Neue", Arial, sans-serif,
+  // Emoji fonts
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  align-items: center;
+  display: flex;
+  font-family: $font-family-sans-serif;
+  justify-content: center;
+  width: 100%;
+}
+
+.main-root {
+  background-color: #f4f4f4;
+  border-radius: 12px;
+  height: 80vh;
+  overflow: auto;
+}
+
+.app {
+  display: flex;
+  height: auto;
+  min-height: 100%;
+  width: 376px;
+}

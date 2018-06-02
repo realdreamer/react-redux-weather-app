@@ -1,6 +1,5 @@
-import React, { Component } from "react";
-// import { connect } from 'react-redux';
-// import { citySearchAction } from '../../actions';
+import React, { Component } from 'react';
+import './styles/SearchForm.css';
 
 class SearchForm extends Component {
   constructor(props) {
@@ -27,19 +26,21 @@ class SearchForm extends Component {
         <form
           name="city-form"
           id="city-form"
-          className="city-form"
+          className="city-search"
           onSubmit={this.onSubmit}
         >
           <input
             type="text"
-            name="city-search__input"
+            name="city-search"
+            className="city-search__input"
             id="city-search"
             value={this.state.searchText}
             onChange={this.handleSearchTextChange}
           />
           <input
             type="submit"
-            name="city-search__btn"
+            name="city-search-btn"
+            className="city-search__btn"
             id="city-search-btn"
             value="Search"
           />

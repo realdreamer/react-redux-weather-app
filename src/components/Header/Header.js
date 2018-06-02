@@ -1,10 +1,11 @@
-import React from "react";
-import SearchForm from "../SearchForm/SearchForm";
+import React from 'react';
+// import SearchForm from '../SearchForm/SearchForm';
+
+import './scss/Header.css';
 
 const Header = props => (
-  <header>
-    <h1>Weather App</h1>
-    <SearchForm onSearch={props.onSearch} />
+  <header className="header">
+    <h1 className="header-title">{props.title}</h1>
   </header>
 );
 

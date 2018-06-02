@@ -7,7 +7,7 @@ import { MemoryRouter, Link } from 'react-router-dom';
 
 import Home from '../Home';
 
-describe('Home Component', () => {
+xdescribe('Home Component', () => {
   let component;
   const state = {
     CityList: {

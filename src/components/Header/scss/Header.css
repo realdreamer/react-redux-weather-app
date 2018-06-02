@@ -1,0 +1,9 @@
+.header {
+  background-color: #f7b18e;
+  color: #fff;
+  padding: 10px;
+  text-align: center; }
+
+.header-title {
+  font-size: 18px;
+  text-transform: uppercase; }

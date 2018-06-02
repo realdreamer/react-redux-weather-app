@@ -1,0 +1,39 @@
+.forecast {
+  display: flex;
+  flex-direction: row;
+  padding: 12px 20px;
+  align-items: center;
+  flex-grow: 1; }
+  .forecast:nth-child(1) {
+    background-color: #f7face;
+    color: #bfb694; }
+  .forecast:nth-child(2) {
+    background-color: #ddf2c7;
+    color: #8fa77c; }
+  .forecast:nth-child(3) {
+    background-color: #abd5b9;
+    color: #638e81; }
+  .forecast:nth-child(4) {
+    background-color: #7ccac0;
+    color: #4c7871; }
+  .forecast:nth-child(5) {
+    background-color: #78bbb3;
+    color: #4c7871; }
+  .forecast:nth-child(6) {
+    background-color: #5fa5a5;
+    color: #31524d; }
+
+.forecast__date {
+  font-size: 14px;
+  font-weight: normal; }
+
+.forecast__state {
+  font-size: 18px;
+  padding-top: 4px; }
+
+.forecast-info {
+  flex-grow: 1; }
+
+.forecaste-state {
+  font-size: 32px;
+  padding: 0 4px; }

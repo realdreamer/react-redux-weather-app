@@ -4,13 +4,13 @@ import { searchResults } from '../../testMockData';
 
 describe('citySearch reducer', () => {
   it('should return the initial state', () => {
-    const initialState = { searchCityResults: [] };
+    const initialState = { searchCityResults: [], searchInitiated: false, };
     expect(citySearch(undefined, {})).toEqual(initialState);
   });
 
   it('should handle FETCHED_CITY', () => {
-    const initialState = { searchCityResults: [] };
-    const expectedState = { searchCityResults: searchResults };
+    const initialState = { searchCityResults: [], searchInitiated: false, };
+    const expectedState = { searchCityResults: searchResults, searchInitiated: true };
     expect(citySearch(initialState, {
       type: FETCHED_CITY,
       payload: {

@@ -1,0 +1,25 @@
+.no-results {
+  background-color: tomato;
+  color: #fff;
+  display: block;
+  font-size: 16px;
+  padding: 16px;
+  text-align: center;
+  width: 100%; }
+
+.city-link {
+  background-color: #76a097;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  color: #2a4a43;
+  display: flex;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  padding: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all .3s ease-in-out; }
+  .city-link:hover {
+    background-color: #9fcec4;
+    letter-spacing: 1.6px; }
+  .city-link:active {
+    transform: translateY(2px); }

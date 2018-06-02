@@ -1,0 +1,11 @@
+$header-bg-color: #f7b18e;
+.header {
+  background-color: $header-bg-color;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+.header-title {
+  font-size: 18px;
+  text-transform: uppercase;
+}

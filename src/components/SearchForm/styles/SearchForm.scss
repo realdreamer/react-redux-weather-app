@@ -1,0 +1,33 @@
+.header-search {
+  padding: 20px 0;
+}
+.city-search {
+  display: flex;
+}
+.city-search__input {
+  border: 1px solid #dbdbdb;
+  font-size: 14px;
+  line-height: 1;
+  min-width: 240px;
+  padding: 6px 8px;
+  min-height: 40px;
+  flex-grow: 1;
+  &:focus {
+    border-color: #e08d63;
+    outline: none;
+  }
+}
+.city-search__btn {
+  background: tomato;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  outline: none;
+  padding: 8px 16px;
+  text-transform: uppercase;
+  &:hover {
+    background-color: #e02200;
+  }
+}
