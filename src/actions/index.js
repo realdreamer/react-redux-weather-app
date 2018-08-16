@@ -26,3 +26,15 @@ export const fetchCityWeatherData = locationId => {
     });
   };
 };
+
+export const formSubmit = value => {
+  console.log(value);
+  return dispatch => {
+    dispatch({
+      type: types.FORM_SUBMIT,
+      payload: {
+        value,
+      }
+    });
+  }
+}

@@ -20,7 +20,6 @@ export class WeatherInfoByLocation extends Component {
   render() {
     return (
       <div className="location">
-        <Header title={this.props.locationWeatherData.title} />
         { /* <h6>{this.props.locationWeatherData.location_type}</h6> */ }
         <WeatherForecast
           weather={this.props.locationWeatherData.consolidated_weather}

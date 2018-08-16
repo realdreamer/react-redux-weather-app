@@ -1,29 +1,38 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0; }
-  *::before, *::after {
-    box-sizing: border-box; }
+  padding: 0;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 html,
 body {
-  height: 100vh; }
+  height: 100vh;
+}
 
 body {
   align-items: center;
   display: flex;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   justify-content: center;
-  width: 100%; }
+  width: 100%;
+}
 
 .main-root {
   background-color: #f4f4f4;
   border-radius: 12px;
   height: 80vh;
-  overflow: auto; }
+  overflow: auto;
+}
 
 .app {
   display: flex;
   height: auto;
+  flex-direction: column;
   min-height: 100%;
-  width: 376px; }
+  width: 376px;
+}

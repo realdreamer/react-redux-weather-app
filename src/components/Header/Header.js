@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 // import SearchForm from '../SearchForm/SearchForm';
 
 import './scss/Header.css';
@@ -9,4 +10,10 @@ const Header = props => (
   </header>
 );
 
-export default Header;
+const mapStateToProps = state => {
+  return {
+    title: 'Helloooo'
+  };
+}
+
+export default connect(mapStateToProps, null)(Header);
